@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App Ações</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><%= link_to 'Pessoas', pessoas_path %></li>
+          <li><%= link_to 'Pontuações', pontuacao_pessoas_path %></li>
+          <li><%= link_to 'Locais de Ação', local_acaos_path %></li>
+          <li><%= link_to 'Pessoas Locais', pessoas_locais_path %></li>
+          <li><%= link_to 'Ações', acaos_path %></li>
+          <li><%= link_to 'Tipos de Ação', tipo_acaos_path %></li>
+          <li><%= link_to 'Gêneros de Ação', genero_acaos_path %></li>
+          <li><%= link_to 'Registros de Ação', registros_acao_path %></li>
+          <li><%= link_to 'Histórico de Ação', historico_acaos_path %></li>
+          <li><%= link_to 'Prêmios', premios_path %></li>
+          <li><%= link_to 'Categorias de Prêmio', categoria_premios_path %></li>
+          <li><%= link_to 'Prêmios Categorias', premio_categorias_path %></li>
+          <li><%= link_to 'Resgates', resgates_path %></li>
+          <li><%= link_to 'Resgates Prêmio', resgate_premios_path %></li>
+          <li><%= link_to 'Ações Locais', acao_locals_path %></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

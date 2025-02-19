@@ -1,0 +1,15 @@
+<!-- app/views/premio_categorias/show.html.erb -->
+<h1>Detalhes do Prêmio Categoria</h1>
+
+<p>
+  <strong>Prêmio ID:</strong>
+  <%= @premio_categoria.premio_id %>
+</p>
+
+<p>
+  <strong>Categoria Prêmio ID:</strong>
+  <%= @premio_categoria.categoria_premio_id %>
+</p>
+
+<%= link_to 'Edit', edit_premio_categoria_path(@premio_categoria) %> |
+<%= link_to 'Back', premio_categorias_path %>

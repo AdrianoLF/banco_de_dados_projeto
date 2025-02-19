@@ -1,0 +1,2 @@
+module RegistroAcaosHelper
+end

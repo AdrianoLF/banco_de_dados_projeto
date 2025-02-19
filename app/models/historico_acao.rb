@@ -1,0 +1,2 @@
+class HistoricoAcao < ApplicationRecord
+end

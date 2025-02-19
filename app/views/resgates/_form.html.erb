@@ -1,0 +1,27 @@
+<!-- app/views/resgates/_form.html.erb -->
+<%= form_with(model: resgate, local: true) do |form| %>
+  <% if resgate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resgate.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% resgate.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :pessoa_id %>
+    <%= form.number_field :pessoa_id %>
+  </div>
+
+  <div>
+    <%= form.label :data_resgate %>
+    <%= form.datetime_local_field :data_resgate %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

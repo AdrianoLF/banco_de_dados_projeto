@@ -1,0 +1,25 @@
+<!-- app/views/local_acaos/index.html.erb -->
+<h1>Locais de Ação</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome Local</th>
+      <th>Endereço</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @local_acaos.each do |local| %>
+      <tr>
+        <td><%= local.nome_local %></td>
+        <td><%= local.endereco %></td>
+        <td><%= link_to 'Show', local %></td>
+        <td><%= link_to 'Edit', edit_local_acao_path(local) %></td>
+        <td><%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Local de Ação', new_local_acao_path %>

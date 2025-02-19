@@ -1,0 +1,22 @@
+<!-- app/views/categoria_premios/_form.html.erb -->
+<%= form_with(model: categoria_premio, local: true) do |form| %>
+  <% if categoria_premio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(categoria_premio.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% categoria_premio.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,32 @@
+<!-- app/views/pessoas_locais/_form.html.erb -->
+<%= form_with(model: pessoa_local, local: true) do |form| %>
+  <% if pessoa_local.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pessoa_local.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% pessoa_local.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :pessoa_id %>
+    <%= form.number_field :pessoa_id %>
+  </div>
+
+  <div>
+    <%= form.label :local_id %>
+    <%= form.number_field :local_id %>
+  </div>
+
+  <div>
+    <%= form.label :data_visita %>
+    <%= form.datetime_local_field :data_visita %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

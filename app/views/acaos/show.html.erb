@@ -1,0 +1,15 @@
+<!-- app/views/acaos/show.html.erb -->
+<h1>Detalhes da Ação</h1>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @acao.descricao %>
+</p>
+
+<p>
+  <strong>Pontos Obtidos:</strong>
+  <%= @acao.pontos_obtidos %>
+</p>
+
+<%= link_to 'Edit', edit_acao_path(@acao) %> |
+<%= link_to 'Back', acaos_path %>

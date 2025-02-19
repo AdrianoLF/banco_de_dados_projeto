@@ -1,0 +1,10 @@
+<!-- app/views/genero_acaos/show.html.erb -->
+<h1>Detalhes do Gênero de Ação</h1>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @genero_acao.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_genero_acao_path(@genero_acao) %> |
+<%= link_to 'Back', genero_acaos_path %>

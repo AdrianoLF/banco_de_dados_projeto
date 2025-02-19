@@ -1,0 +1,15 @@
+<!-- app/views/historico_acaos/show.html.erb -->
+<h1>Detalhes do Histórico de Ação</h1>
+
+<p>
+  <strong>Pessoa ID:</strong>
+  <%= @historico_acao.pessoa_id %>
+</p>
+
+<p>
+  <strong>Ação ID:</strong>
+  <%= @historico_acao.acao_id %>
+</p>
+
+<%= link_to 'Edit', edit_historico_acao_path(@historico_acao) %> |
+<%= link_to 'Back', historico_acaos_path %>

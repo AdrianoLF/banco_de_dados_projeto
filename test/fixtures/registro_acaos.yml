@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acao_id: 1
+  data_execucao: 2025-02-17 16:21:41
+
+two:
+  acao_id: 1
+  data_execucao: 2025-02-17 16:21:41

@@ -1,0 +1,25 @@
+<!-- app/views/resgates/index.html.erb -->
+<h1>Resgates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pessoa ID</th>
+      <th>Data Resgate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resgates.each do |resgate| %>
+      <tr>
+        <td><%= resgate.pessoa_id %></td>
+        <td><%= resgate.data_resgate %></td>
+        <td><%= link_to 'Show', resgate %></td>
+        <td><%= link_to 'Edit', edit_resgate_path(resgate) %></td>
+        <td><%= link_to 'Destroy', resgate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Resgate', new_resgate_path %>

@@ -1,0 +1,20 @@
+<!-- app/views/resgate_premios/show.html.erb -->
+<h1>Detalhes do Resgate Prêmio</h1>
+
+<p>
+  <strong>Resgate ID:</strong>
+  <%= @resgate_premio.resgate_id %>
+</p>
+
+<p>
+  <strong>Prêmio ID:</strong>
+  <%= @resgate_premio.premio_id %>
+</p>
+
+<p>
+  <strong>Pontos Utilizados:</strong>
+  <%= @resgate_premio.pontos_utilizados %>
+</p>
+
+<%= link_to 'Edit', edit_resgate_premio_path(@resgate_premio) %> |
+<%= link_to 'Back', resgate_premios_path %>

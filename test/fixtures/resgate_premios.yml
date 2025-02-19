@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  resgate_id: 1
+  premio_id: 1
+  pontos_utilizados: 1
+
+two:
+  resgate_id: 1
+  premio_id: 1
+  pontos_utilizados: 1

@@ -1,0 +1,27 @@
+<!-- app/views/premios/_form.html.erb -->
+<%= form_with(model: premio, local: true) do |form| %>
+  <% if premio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(premio.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% premio.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :custo_pontos %>
+    <%= form.number_field :custo_pontos %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

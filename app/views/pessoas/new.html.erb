@@ -1,0 +1,22 @@
+<!-- app/views/pessoas/new.html.erb -->
+<h1>Nova Pessoa</h1>
+
+<%= render 'form', pessoa: @pessoa %>
+
+<%= link_to 'Voltar', pessoas_path %>
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Local acaos" %>
+
+<h1>Local acaos</h1>
+
+<div id="local_acaos">
+  <% @local_acaos.each do |local_acao| %>
+    <%= render local_acao %>
+    <p>
+      <%= link_to "Show this local acao", local_acao %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New local acao", new_local_acao_path %>

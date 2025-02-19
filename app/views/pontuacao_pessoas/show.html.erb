@@ -1,0 +1,15 @@
+<!-- app/views/pontuacao_pessoas/show.html.erb -->
+<h1>Detalhes da Pontuação Pessoa</h1>
+
+<p>
+  <strong>Pessoa ID:</strong>
+  <%= @pontuacao_pessoa.pessoa_id %>
+</p>
+
+<p>
+  <strong>Pontuação Total:</strong>
+  <%= @pontuacao_pessoa.pontuacao_total %>
+</p>
+
+<%= link_to 'Edit', edit_pontuacao_pessoa_path(@pontuacao_pessoa) %> |
+<%= link_to 'Back', pontuacao_pessoas_path %>

@@ -1,0 +1,25 @@
+<!-- app/views/acaos/index.html.erb -->
+<h1>Ações</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Pontos Obtidos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @acaos.each do |acao| %>
+      <tr>
+        <td><%= acao.descricao %></td>
+        <td><%= acao.pontos_obtidos %></td>
+        <td><%= link_to 'Show', acao %></td>
+        <td><%= link_to 'Edit', edit_acao_path(acao) %></td>
+        <td><%= link_to 'Destroy', acao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Ação', new_acao_path %>

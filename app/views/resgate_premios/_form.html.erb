@@ -1,0 +1,32 @@
+<!-- app/views/resgate_premios/_form.html.erb -->
+<%= form_with(model: resgate_premio, local: true) do |form| %>
+  <% if resgate_premio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resgate_premio.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% resgate_premio.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :resgate_id %>
+    <%= form.number_field :resgate_id %>
+  </div>
+
+  <div>
+    <%= form.label :premio_id %>
+    <%= form.number_field :premio_id %>
+  </div>
+
+  <div>
+    <%= form.label :pontos_utilizados %>
+    <%= form.number_field :pontos_utilizados %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<!-- app/views/historico_acaos/_form.html.erb -->
+<%= form_with(model: historico_acao, local: true) do |form| %>
+  <% if historico_acao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(historico_acao.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% historico_acao.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :pessoa_id %>
+    <%= form.number_field :pessoa_id %>
+  </div>
+
+  <div>
+    <%= form.label :acao_id %>
+    <%= form.number_field :acao_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

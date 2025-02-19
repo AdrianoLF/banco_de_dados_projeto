@@ -1,0 +1,26 @@
+<h1>Pessoas Locais</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pessoa ID</th>
+      <th>Local ID</th>
+      <th>Data Visita</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pessoas_locais.each do |pl| %>
+      <tr>
+        <td><%= pl.pessoa_id %></td>
+        <td><%= pl.local_id %></td>
+        <td><%= pl.data_visita %></td>
+        <td><%= link_to 'Show', pessoas_locai_path(pl) %></td>
+        <td><%= link_to 'Edit', edit_pessoas_locai_path(pl) %></td>
+        <td><%= link_to 'Destroy', pessoas_locai_path(pl), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Pessoa Local', new_pessoas_locai_path %>

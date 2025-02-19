@@ -1,0 +1,27 @@
+<!-- app/views/resgate_premios/index.html.erb -->
+<h1>Resgates Prêmio</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resgate ID</th>
+      <th>Prêmio ID</th>
+      <th>Pontos Utilizados</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resgate_premios.each do |rp| %>
+      <tr>
+        <td><%= rp.resgate_id %></td>
+        <td><%= rp.premio_id %></td>
+        <td><%= rp.pontos_utilizados %></td>
+        <td><%= link_to 'Show', rp %></td>
+        <td><%= link_to 'Edit', edit_resgate_premio_path(rp) %></td>
+        <td><%= link_to 'Destroy', rp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Resgate Prêmio', new_resgate_premio_path %>

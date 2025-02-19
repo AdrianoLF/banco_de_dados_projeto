@@ -1,0 +1,15 @@
+<!-- app/views/registros_acao/show.html.erb -->
+<h1>Detalhes do Registro de Ação</h1>
+
+<p>
+  <strong>Ação ID:</strong>
+  <%= @registro_acao.acao_id %>
+</p>
+
+<p>
+  <strong>Data Execução:</strong>
+  <%= @registro_acao.data_execucao %>
+</p>
+
+<%= link_to 'Edit', edit_registro_acao_path(@registro_acao) %> |
+<%= link_to 'Back', registros_acao_path %>

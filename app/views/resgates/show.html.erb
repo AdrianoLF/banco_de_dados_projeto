@@ -1,0 +1,15 @@
+<!-- app/views/resgates/show.html.erb -->
+<h1>Detalhes do Resgate</h1>
+
+<p>
+  <strong>Pessoa ID:</strong>
+  <%= @resgate.pessoa_id %>
+</p>
+
+<p>
+  <strong>Data Resgate:</strong>
+  <%= @resgate.data_resgate %>
+</p>
+
+<%= link_to 'Edit', edit_resgate_path(@resgate) %> |
+<%= link_to 'Back', resgates_path %>

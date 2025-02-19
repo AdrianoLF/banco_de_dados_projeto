@@ -1,0 +1,25 @@
+<!-- app/views/premio_categorias/index.html.erb -->
+<h1>Prêmios Categorias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prêmio ID</th>
+      <th>Categoria Prêmio ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @premio_categorias.each do |pc| %>
+      <tr>
+        <td><%= pc.premio_id %></td>
+        <td><%= pc.categoria_premio_id %></td>
+        <td><%= link_to 'Show', pc %></td>
+        <td><%= link_to 'Edit', edit_premio_categoria_path(pc) %></td>
+        <td><%= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Prêmio Categoria', new_premio_categoria_path %>

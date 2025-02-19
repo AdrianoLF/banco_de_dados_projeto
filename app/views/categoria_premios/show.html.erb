@@ -1,0 +1,10 @@
+<!-- app/views/categoria_premios/show.html.erb -->
+<h1>Detalhes da Categoria de Prêmio</h1>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @categoria_premio.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_categoria_premio_path(@categoria_premio) %> |
+<%= link_to 'Back', categoria_premios_path %>

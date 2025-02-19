@@ -1,0 +1,20 @@
+<!-- app/views/pessoas_locais/show.html.erb -->
+<h1>Detalhes da Pessoa Local</h1>
+
+<p>
+  <strong>Pessoa ID:</strong>
+  <%= @pessoa_local.pessoa_id %>
+</p>
+
+<p>
+  <strong>Local ID:</strong>
+  <%= @pessoa_local.local_id %>
+</p>
+
+<p>
+  <strong>Data Visita:</strong>
+  <%= @pessoa_local.data_visita %>
+</p>
+
+<%= link_to 'Edit', edit_pessoas_locais_path(@pessoa_local) %> |
+<%= link_to 'Back', pessoas_locais_path %>

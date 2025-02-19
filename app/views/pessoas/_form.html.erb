@@ -1,0 +1,37 @@
+<!-- app/views/pessoas/_form.html.erb -->
+<%= form_with(model: pessoa, local: true) do |form| %>
+  <% if pessoa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pessoa.errors.count, "error") %> prohibited this pessoa from being saved:</h2>
+      <ul>
+        <% pessoa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :data_nascimento %>
+    <%= form.date_field :data_nascimento %>
+  </div>
+
+  <div>
+    <%= form.label :sexo %>
+    <%= form.text_field :sexo %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

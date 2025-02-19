@@ -1,0 +1,25 @@
+<!-- app/views/pessoas/show.html.erb -->
+<h1>Detalhes da Pessoa</h1>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @pessoa.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @pessoa.email %>
+</p>
+
+<p>
+  <strong>Data de Nascimento:</strong>
+  <%= @pessoa.data_nascimento %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @pessoa.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
+<%= link_to 'Back', pessoas_path %>

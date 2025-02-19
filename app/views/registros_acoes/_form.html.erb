@@ -1,0 +1,27 @@
+<!-- app/views/registros_acao/_form.html.erb -->
+<%= form_with(model: registro_acao, local: true) do |form| %>
+  <% if registro_acao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(registro_acao.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% registro_acao.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :acao_id %>
+    <%= form.number_field :acao_id %>
+  </div>
+
+  <div>
+    <%= form.label :data_execucao %>
+    <%= form.datetime_local_field :data_execucao %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

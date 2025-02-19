@@ -1,0 +1,27 @@
+<!-- app/views/local_acaos/_form.html.erb -->
+<%= form_with(model: local_acao, local: true) do |form| %>
+  <% if local_acao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(local_acao.errors.count, "error") %> prohibited this local_acao from being saved:</h2>
+      <ul>
+        <% local_acao.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome_local %>
+    <%= form.text_field :nome_local %>
+  </div>
+
+  <div>
+    <%= form.label :endereco %>
+    <%= form.text_area :endereco %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

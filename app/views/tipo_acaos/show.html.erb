@@ -1,0 +1,10 @@
+<!-- app/views/tipo_acaos/show.html.erb -->
+<h1>Detalhes do Tipo de Ação</h1>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @tipo_acao.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_acao_path(@tipo_acao) %> |
+<%= link_to 'Back', tipo_acaos_path %>

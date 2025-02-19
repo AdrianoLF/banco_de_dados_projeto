@@ -1,0 +1,27 @@
+<!-- app/views/pontuacao_pessoas/_form.html.erb -->
+<%= form_with(model: pontuacao_pessoa, local: true) do |form| %>
+  <% if pontuacao_pessoa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pontuacao_pessoa.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% pontuacao_pessoa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :pessoa_id %>
+    <%= form.number_field :pessoa_id %>
+  </div>
+
+  <div>
+    <%= form.label :pontuacao_total %>
+    <%= form.number_field :pontuacao_total %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

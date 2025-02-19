@@ -1,0 +1,23 @@
+<!-- app/views/genero_acaos/index.html.erb -->
+<h1>Gêneros de Ação</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @genero_acaos.each do |genero| %>
+      <tr>
+        <td><%= genero.descricao %></td>
+        <td><%= link_to 'Show', genero %></td>
+        <td><%= link_to 'Edit', edit_genero_acao_path(genero) %></td>
+        <td><%= link_to 'Destroy', genero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Gênero de Ação', new_genero_acao_path %>

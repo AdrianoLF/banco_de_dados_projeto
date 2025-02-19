@@ -1,0 +1,15 @@
+<!-- app/views/premios/show.html.erb -->
+<h1>Detalhes do Prêmio</h1>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @premio.nome %>
+</p>
+
+<p>
+  <strong>Custo Pontos:</strong>
+  <%= @premio.custo_pontos %>
+</p>
+
+<%= link_to 'Edit', edit_premio_path(@premio) %> |
+<%= link_to 'Back', premios_path %>

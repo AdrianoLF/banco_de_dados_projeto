@@ -1,0 +1,32 @@
+<!-- app/views/acao_locals/_form.html.erb -->
+<%= form_with(model: acao_local, local: true) do |form| %>
+  <% if acao_local.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(acao_local.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+        <% acao_local.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :acao_id %>
+    <%= form.number_field :acao_id %>
+  </div>
+
+  <div>
+    <%= form.label :local_id %>
+    <%= form.number_field :local_id %>
+  </div>
+
+  <div>
+    <%= form.label :disponibilidade %>
+    <%= form.check_box :disponibilidade %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
