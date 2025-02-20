@@ -1,0 +1,21 @@
+<!-- app/views/premios_categorias/index.html.erb -->
+<h1>Prêmios Categorias</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Prêmio ID</th>
+      <th>Categoria Prêmio ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @premios_categorias.each do |pc| %>
+      <tr>
+        <td><%= pc.premio_id %></td>
+        <td><%= pc.categoria_premio_id %></td>
+        <td><%= link_to 'Edit', "#{pc.id}/edit" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Prêmio Categoria', "premios_categorias/new" %>

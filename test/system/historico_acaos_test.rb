@@ -2,16 +2,16 @@ require "application_system_test_case"
 
 class HistoricoAcaosTest < ApplicationSystemTestCase
   setup do
-    @historico_acao = historico_acaos(:one)
+    @historico_acao = historico_acao(:one)
   end
 
   test "visiting the index" do
-    visit historico_acaos_url
+    visit historico_acao_url
     assert_selector "h1", text: "Historico acaos"
   end
 
   test "should create historico acao" do
-    visit historico_acaos_url
+    visit historico_acao_url
     click_on "New historico acao"
 
     fill_in "Acao", with: @historico_acao.acao_id

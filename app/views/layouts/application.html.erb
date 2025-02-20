@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>App Ações</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
-  <body>
-    <header>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Ações</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-blue-600 text-white p-5 flex flex-col space-y-4 fixed h-full">
+      <h1 class="text-2xl font-bold">App Ações</h1>
       <nav>
-        <ul>
-          <li><%= link_to 'Pessoas', pessoas_path %></li>
-          <li><%= link_to 'Pontuações', pontuacao_pessoas_path %></li>
-          <li><%= link_to 'Locais de Ação', local_acaos_path %></li>
-          <li><%= link_to 'Pessoas Locais', pessoas_locais_path %></li>
-          <li><%= link_to 'Ações', acaos_path %></li>
-          <li><%= link_to 'Tipos de Ação', tipo_acaos_path %></li>
-          <li><%= link_to 'Gêneros de Ação', genero_acaos_path %></li>
-          <li><%= link_to 'Registros de Ação', registros_acao_path %></li>
-          <li><%= link_to 'Histórico de Ação', historico_acaos_path %></li>
-          <li><%= link_to 'Prêmios', premios_path %></li>
-          <li><%= link_to 'Categorias de Prêmio', categoria_premios_path %></li>
-          <li><%= link_to 'Prêmios Categorias', premio_categorias_path %></li>
-          <li><%= link_to 'Resgates', resgates_path %></li>
-          <li><%= link_to 'Resgates Prêmio', resgate_premios_path %></li>
-          <li><%= link_to 'Ações Locais', acao_locals_path %></li>
+        <ul class="space-y-2">
+          <li><%= link_to 'Pessoas', pessoas_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Pontuações', pontuacao_pessoas_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Locais de Ação', local_acaos_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Pessoas Locais', pessoas_locais_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Ações', acaos_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Tipos de Ação', tipo_acaos_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Gêneros de Ação', genero_acaos_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Histórico de Ação', 'historico_acao', class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Prêmios', premios_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Categorias de Prêmio', categoria_premios_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Prêmios Categorias', 'premios_categorias', class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Resgates', resgates_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Resgates Prêmio', resgate_premios_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
+          <li><%= link_to 'Ações Locais', acao_locals_path, class: "block py-2 px-4 rounded hover:bg-blue-700" %></li>
         </ul>
       </nav>
-    </header>
+    </aside>
 
-    <main>
-      <%= yield %>
+    <!-- Main content -->
+    <main class="flex-1 ml-64 p-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <%= yield %>
+      </div>
     </main>
-  </body>
+  </div>
+</body>
 </html>

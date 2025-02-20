@@ -1,25 +1,25 @@
 class RegistrosAcaoController < ApplicationController
   before_action :set_registro_acao, only: %i[ show edit update destroy ]
 
-  # GET /registro_acoes or /registro_acoes.json
+  # GET /registros_acao or /registros_acao.json
   def index
-    @registro_acoes = RegistroAcao.all
+    @registros_acao = RegistroAcao.all
   end
 
-  # GET /registro_acoes/1 or /registro_acoes/1.json
+  # GET /registros_acao/1 or /registros_acao/1.json
   def show
   end
 
-  # GET /registro_acoes/new
+  # GET /registros_acao/new
   def new
     @registro_acao = RegistroAcao.new
   end
 
-  # GET /registro_acoes/1/edit
+  # GET /registros_acao/1/edit
   def edit
   end
 
-  # POST /registro_acoes or /registro_acoes.json
+  # POST /registros_acao or /registros_acao.json
   def create
     @registro_acao = RegistroAcao.new(registro_acao_params)
 
@@ -34,7 +34,7 @@ class RegistrosAcaoController < ApplicationController
     end
   end
 
-  # PATCH/PUT /registro_acoes/1 or /registro_acoes/1.json
+  # PATCH/PUT /registros_acao/1 or /registros_acao/1.json
   def update
     respond_to do |format|
       if @registro_acao.update(registro_acao_params)
@@ -47,7 +47,7 @@ class RegistrosAcaoController < ApplicationController
     end
   end
 
-  # DELETE /registro_acoes/1 or /registro_acoes/1.json
+  # DELETE /registros_acao/1 or /registros_acao/1.json
   def destroy
     @registro_acao.destroy!
 

@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   resources :tipo_acaos
   resources :genero_acaos
   resources :registros_acao
-  resources :historico_acaos
+  resources :historico_acao
   resources :premios
   resources :categoria_premios
-  resources :premio_categorias
+  resources :premios_categorias
   resources :resgates
   resources :resgate_premios
   resources :acao_locals

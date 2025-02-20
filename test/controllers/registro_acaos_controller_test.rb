@@ -2,7 +2,7 @@ require "test_helper"
 
 class RegistroAcaosControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @registro_acao = registro_acoes(:one)
+    @registro_acao = registros_acao(:one)
   end
 
   test "should get index" do

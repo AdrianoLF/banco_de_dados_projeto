@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class RegistroAcaosTest < ApplicationSystemTestCase
   setup do
-    @registro_acao = registro_acoes(:one)
+    @registro_acao = registros_acao(:one)
   end
 
   test "visiting the index" do

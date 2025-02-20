@@ -1,9 +1,9 @@
-class PremioCategoriaController < ApplicationController
+class PremiosCategoriasController < ApplicationController
   before_action :set_premio_categoria, only: %i[ show edit update destroy ]
 
   # GET /premio_categoria or /premio_categoria.json
   def index
-    @premio_categoria = PremioCategorium.all
+    @premios_categorias = PremioCategoria.all
   end
 
   # GET /premio_categoria/1 or /premio_categoria/1.json
@@ -12,7 +12,7 @@ class PremioCategoriaController < ApplicationController
 
   # GET /premio_categoria/new
   def new
-    @premio_categoria = PremioCategorium.new
+    @premio_categoria = PremioCategoria.new
   end
 
   # GET /premio_categoria/1/edit
@@ -21,7 +21,7 @@ class PremioCategoriaController < ApplicationController
 
   # POST /premio_categoria or /premio_categoria.json
   def create
-    @premio_categoria = PremioCategorium.new(premio_categoria_params)
+    @premio_categoria = PremioCategoria.new(premio_categoria_params)
 
     respond_to do |format|
       if @premio_categoria.save
@@ -60,7 +60,7 @@ class PremioCategoriaController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_premio_categoria
-      @premio_categoria = PremioCategorium.find(params.expect(:id))
+      @premio_categoria = PremioCategoria.find(params.expect(:id))
     end
 
     # Only allow a list of trusted parameters through.

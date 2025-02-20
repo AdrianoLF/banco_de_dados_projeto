@@ -2,11 +2,11 @@ require "test_helper"
 
 class HistoricoAcaosControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @historico_acao = historico_acaos(:one)
+    @historico_acao = historico_acao(:one)
   end
 
   test "should get index" do
-    get historico_acaos_url
+    get historico_acao_url
     assert_response :success
   end
 
@@ -17,7 +17,7 @@ class HistoricoAcaosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create historico_acao" do
     assert_difference("HistoricoAcao.count") do
-      post historico_acaos_url, params: { historico_acao: { acao_id: @historico_acao.acao_id, pessoa_id: @historico_acao.pessoa_id } }
+      post historico_acao_url, params: { historico_acao: { acao_id: @historico_acao.acao_id, pessoa_id: @historico_acao.pessoa_id } }
     end
 
     assert_redirected_to historico_acao_url(HistoricoAcao.last)
@@ -43,6 +43,6 @@ class HistoricoAcaosControllerTest < ActionDispatch::IntegrationTest
       delete historico_acao_url(@historico_acao)
     end
 
-    assert_redirected_to historico_acaos_url
+    assert_redirected_to historico_acao_url
   end
 end

@@ -1,25 +1,25 @@
-class HistoricoAcaosController < ApplicationController
+class HistoricoAcaoController < ApplicationController
   before_action :set_historico_acao, only: %i[ show edit update destroy ]
 
-  # GET /historico_acaos or /historico_acaos.json
+  # GET /historico_acao or /historico_acao.json
   def index
-    @historico_acaos = HistoricoAcao.all
+    @historico_acao = HistoricoAcao.all
   end
 
-  # GET /historico_acaos/1 or /historico_acaos/1.json
+  # GET /historico_acao/1 or /historico_acao/1.json
   def show
   end
 
-  # GET /historico_acaos/new
+  # GET /historico_acao/new
   def new
     @historico_acao = HistoricoAcao.new
   end
 
-  # GET /historico_acaos/1/edit
+  # GET /historico_acao/1/edit
   def edit
   end
 
-  # POST /historico_acaos or /historico_acaos.json
+  # POST /historico_acao or /historico_acao.json
   def create
     @historico_acao = HistoricoAcao.new(historico_acao_params)
 
@@ -34,7 +34,7 @@ class HistoricoAcaosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /historico_acaos/1 or /historico_acaos/1.json
+  # PATCH/PUT /historico_acao/1 or /historico_acao/1.json
   def update
     respond_to do |format|
       if @historico_acao.update(historico_acao_params)
@@ -47,12 +47,12 @@ class HistoricoAcaosController < ApplicationController
     end
   end
 
-  # DELETE /historico_acaos/1 or /historico_acaos/1.json
+  # DELETE /historico_acao/1 or /historico_acao/1.json
   def destroy
     @historico_acao.destroy!
 
     respond_to do |format|
-      format.html { redirect_to historico_acaos_path, status: :see_other, notice: "Historico acao was successfully destroyed." }
+      format.html { redirect_to historico_acao_path, status: :see_other, notice: "Historico acao was successfully destroyed." }
       format.json { head :no_content }
     end
   end

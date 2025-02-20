@@ -1,29 +1,28 @@
-<!-- app/views/pessoas/index.html.erb -->
-<h1>Pessoas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Data Nascimento</th>
-      <th>Sexo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @pessoas.each do |pessoa| %>
+<h1 class="text-2xl font-bold mb-4">Pessoas</h1>
+<div class="table-container">
+  <table>
+    <thead>
       <tr>
-        <td><%= pessoa.nome %></td>
-        <td><%= pessoa.email %></td>
-        <td><%= pessoa.data_nascimento %></td>
-        <td><%= pessoa.sexo %></td>
-        <td><%= link_to 'Show', pessoa %></td>
-        <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
-        <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Pontuação</th>
+        <th>Ações</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to 'New Pessoa', new_pessoa_path %>
+    </thead>
+    <tbody>
+      <% @pessoas.each do |pessoa| %>
+        <tr>
+          <td><%= pessoa.nome %></td>
+          <td><%= pessoa.pontuacao %></td>
+          <td>
+            <%= link_to 'Show', pessoa, class: "text-blue-600 hover:underline" %>
+            <%= link_to 'Edit', edit_pessoa_path(pessoa), class: "text-yellow-600 hover:underline" %>
+            <%= form_with model: pessoa, class: "inline", method: :delete, local: true, onsubmit: "return confirm('Tem certeza que deseja excluir?');" do |f| %>
+              <%= f.submit "Destroy", class: "text-red-600 hover:underline cursor-pointer bg-transparent border-none p-0" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= link_to 'New Pessoa', new_pessoa_path, class: "btn btn-new mt-4 inline-block" %>

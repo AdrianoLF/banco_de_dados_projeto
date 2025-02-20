@@ -16,11 +16,11 @@ class PremioCategoriaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create premio_categoria" do
-    assert_difference("PremioCategorium.count") do
+    assert_difference("PremioCategoria.count") do
       post premio_categoria_url, params: { premio_categoria: { categoria_premio_id: @premio_categoria.categoria_premio_id, premio_id: @premio_categoria.premio_id } }
     end
 
-    assert_redirected_to premio_categoria_url(PremioCategorium.last)
+    assert_redirected_to premio_categoria_url(PremioCategoria.last)
   end
 
   test "should show premio_categoria" do
@@ -39,7 +39,7 @@ class PremioCategoriaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy premio_categoria" do
-    assert_difference("PremioCategorium.count", -1) do
+    assert_difference("PremioCategoria.count", -1) do
       delete premio_categoria_url(@premio_categoria)
     end
 
